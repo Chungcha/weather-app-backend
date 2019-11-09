@@ -7,11 +7,11 @@ class MetaWeatherController < ApplicationController
     end 
 
     def search
+    
         searchCity = params["search"]
         response = RestClient.get("https://www.metaweather.com/api/location/search/?query=#{searchCity}")
-        jsonResponse = JSON.parse(response.body)
-
-        render json: jsonResponse
+      
+        render json: response
     end
 
 end
