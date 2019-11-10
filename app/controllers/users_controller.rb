@@ -13,10 +13,9 @@ class UsersController < ApplicationController
     end
 
     def login
-        
         user = User.find_by(username: params["username"])
 
-        render json: user.favorites
+        render json: user.favorites, except: [:updated_at, :created_at]
     end
 
 end
