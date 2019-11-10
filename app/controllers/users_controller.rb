@@ -12,8 +12,11 @@ class UsersController < ApplicationController
         render html: users
     end
 
-    def show
-        user = User.find(params[id])
+    def login
+        
+        user = User.find_by(username: params["username"])
+
+        render json: user.favorites
     end
 
 end

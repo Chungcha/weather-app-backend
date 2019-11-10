@@ -12,5 +12,8 @@ Favorite.destroy_all
 user1 = User.create("username": "heej")
 user2 = User.create("username": "charlie")
 
-favorite1 = Favorite.create("user_id": user1.id, "location_id": "seoul1")
-favorite2 = Favorite.create("user_id": user2.id, "location_id": "detroint1")
+favorite1 = Favorite.create("user_id": user1.id, "location_id": "44418")
+favorite2 = Favorite.create("user_id": user1.id, "location_id": "2514815")
+favorite3 = Favorite.create("user_id": user2.id, "location_id": "2358820")
+favorite4 = Favorite.create("user_id": user2.id, "location_id": "2478307")
+favorite5 = Favorite.create("user_id": user2.id, "location_id": "2459115")
