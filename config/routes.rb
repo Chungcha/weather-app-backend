@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  resources :users
-  resources :favorites
+  resources :users, only: [:create, :index, :show]
+  resources :favorites, only: [:create, :destroy]
   get "/test", to: "meta_weather#test"
   post "/search", to: "meta_weather#search"
   post "/location", to: "meta_weather#location"
