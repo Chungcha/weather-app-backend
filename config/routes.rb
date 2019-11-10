@@ -5,5 +5,6 @@ Rails.application.routes.draw do
   post "/search", to: "meta_weather#search"
   post "/location", to: "meta_weather#location"
   post "/geolocation", to: "meta_weather#geolocation"
+  post "/login", to: "user#login"
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
