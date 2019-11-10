@@ -4,7 +4,7 @@ class FavoritesController < ApplicationController
         favorite = Favorite.create(location_id: params[id], user_id: params[id])
     end
 
-    def destroy
-    end
+    # def destroy
+    # end
 
 end
