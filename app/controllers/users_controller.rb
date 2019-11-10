@@ -15,7 +15,16 @@ class UsersController < ApplicationController
     def login
         user = User.find_by(username: params["username"])
 
-        render json: user.favorites, except: [:updated_at, :created_at]
+        render json: user.to_json(serialize)
     end
 
+    private 
+
+    def serialize
+        { :include => { :favorites => {
+                        :except => [:created_at, :updated_at]
+                        }},
+        :only => [:username, :id]
+        }
+    end
 end
