@@ -20,4 +20,8 @@ class MetaWeatherController < ApplicationController
         render json: response 
     end 
 
+    def geoLocation
+        location = params[""]
+    end
+
 end
