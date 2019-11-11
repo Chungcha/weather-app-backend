@@ -27,4 +27,14 @@ class UsersController < ApplicationController
         :only => [:username, :id]
         }
     end
+
+    private 
+
+    def serialize
+        { :include => { :favorites => {
+                        :except => [:created_at, :updated_at]
+                        }},
+        :only => [:username, :id]
+        }
+    end
 end
