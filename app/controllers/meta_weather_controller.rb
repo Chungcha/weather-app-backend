@@ -15,6 +15,7 @@ class MetaWeatherController < ApplicationController
 
     def location 
         location_id = params["location_id"]
+        
         response = RestClient.get("https://www.metaweather.com/api/location/#{location_id}/")
 
         render json: response 

@@ -1,8 +1,7 @@
 class FavoritesController < ApplicationController
 
     def create
-        favorite = Favorite.create(location_id: params[:woeId], user_id: params[:userId])
-
+        favorite = Favorite.create(location_id: params[:location_id], user_id: params[:user_id])
         render json: favorite
     end
 
