@@ -1,2 +1,2 @@
 # weather-project-backend
-THIS IS A CHANGE
+Link to frontend: https://github.com/Chungcha/weather-app-frontend
